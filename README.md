@@ -32,7 +32,9 @@ If the option to AddDb is used without specifying, it will add to "Hits.db" by d
 Examples of how ProcessBLASTHits.py was run in the HIVES analysis:
 
 python ProcessBLASTHits.py refseq_hits.txt RefSeqHits --OriginDatabase RefSeq --AddDb
+
 python ProcessBLASTHits.py partial_hits.txt PartialHits  --OriginDatabase GenBank --AddDb
+
 python ProcessBLASTHits.py complete_hits.txt CompleteHits --OriginDatabase GenBank --AddDb
 
 # GetTax.py
@@ -48,6 +50,7 @@ If the option to AddDb is used without specifying, it will add to "Hits.db" by d
 Examples of how MergeBLASTHits.py was run in the HIVES analysis:
 
 python MergeBLASTHits.py RefSeqHits.csv AllHits PartialHits.csv CompleteHits.csv --AddDb
+
 python MergeBLASTHits.py PartialHits.csv GenBankHits CompleteHits.csv --AddDb
 
 # GetSubId.py
