@@ -30,6 +30,7 @@ The results are added to CSV by default, but can also be added to database.
 If the option to AddDb is used without specifying, it will add to "Hits.db" by default but can be added to a database of a user-set name.
 
 Examples of how ProcessBLASTHits.py was run in the HIVES analysis:
+
 python ProcessBLASTHits.py refseq_hits.txt RefSeqHits --OriginDatabase RefSeq --AddDb
 python ProcessBLASTHits.py partial_hits.txt PartialHits  --OriginDatabase GenBank --AddDb
 python ProcessBLASTHits.py complete_hits.txt CompleteHits --OriginDatabase GenBank --AddDb
@@ -45,6 +46,7 @@ If the option to AddDb is used without specifying, it will add to "Hits.db" by d
 
 
 Examples of how MergeBLASTHits.py was run in the HIVES analysis:
+
 python MergeBLASTHits.py RefSeqHits.csv AllHits PartialHits.csv CompleteHits.csv --AddDb
 python MergeBLASTHits.py PartialHits.csv GenBankHits CompleteHits.csv --AddDb
 
@@ -65,5 +67,5 @@ If option Strict chosen, then it will filter out any contaminted sequences that 
 Will automically create a summary file of any matching sequences in the input BLAST file, with why the sequence was flagged and the recommended action.
 
 Example of how CheckMyBLAST.py can be used to filter out contaminated virus sequences from a BLAST results file:
-python CheckMyBlast.py complete_test.txt testfilter.txt ProblematicVirus.csv ProblematicNonVirus.csv --Virus --Strict
 
+python CheckMyBlast.py complete_test.txt testfilter.txt ProblematicVirus.csv ProblematicNonVirus.csv --Virus --Strict
