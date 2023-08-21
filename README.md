@@ -17,7 +17,7 @@ Scripts ran in following order:
 8. SummariseSubjectFiltes.py
 9. FinalFiltering.py
     
-(tool to flag problematic sequences in other BLAST datasets)
+(demo tool to show how problematic sequences could be flagged in other BLAST datasets)
 
 10. CheckMyBLAST.py
 
