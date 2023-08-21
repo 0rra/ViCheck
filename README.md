@@ -12,12 +12,21 @@ Scripts ran in following order:
    
 (plotting and analysis scripts)
 
-7. SummariseHead.py
-8. SummariseHitFiles.py
-9. SummariseSubjectFiltes.py
-10. FinalFiltering.py
+6. SummariseHead.py
+7. SummariseHitFiles.py
+8. SummariseSubjectFiltes.py
+9. FinalFiltering.py
     
 (tool to flag problematic sequences in other BLAST datasets)
 
-12. CheckMyBLAST.py
+10. CheckMyBLAST.py
 
+# examples of how ProcessBLASTHits.py was run
+python ProcessBLASTHits.py refseq_hits.txt RefSeqHits --OriginDatabase RefSeq --AddDb
+python ProcessBLASTHits.py partial_hits.txt PartialHits  --OriginDatabase GenBank --AddDb
+python ProcessBLASTHits.py complete_hits.txt CompleteHits --OriginDatabase GenBank --AddDb
+# examples of how MergeBLASTHits.py was run
+python MergeBLASTHits.py RefSeqHits.csv AllHits PartialHits.csv CompleteHits.csv --AddDb
+python MergeBLASTHits.py PartialHits.csv GenBankHits CompleteHits.csv --AddDb
+# example of how CheckMyBLAST.py can be run
+python CheckMyBlast.py complete_test.txt testfilter.txt ProblematicVirus.csv ProblematicNonVirus.csv --Virus --Strict
